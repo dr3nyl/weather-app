@@ -4,7 +4,7 @@
             <!-- select component -->
             <drop-down @selected-city="selectedCity"></drop-down>
             <!-- weather and place component -->
-            <div class="mt-14 flex sm:flex-col lg:flex-row gap-6 lg:gap-8">
+            <div class="mt-14 flex flex-col xl:flex-row gap-6 lg:gap-8">
                 <weather-container
                     :cityName="cityName"
                     :weatherLists="weatherLists"
