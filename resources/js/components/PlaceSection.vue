@@ -8,7 +8,7 @@
         </div>
         <div v-else class="mr-4">
             <!-- show photo of place -->
-            <img :src="photoDetails.prefix + '230x250' + photoDetails.suffix">
+            <img :src="photoDetails.prefix + '230x240' + photoDetails.suffix">
         </div>
         <div class="flex flex-col">
             <h2 class="text-2xl font-semibold text-gray-900 dark:text-white">{{ name }}</h2>

@@ -1,9 +1,9 @@
 <template>
     <div class="relative sm:flex sm:justify-center sm:items-center min-h-screen bg-dots-darker bg-center bg-gray-100 dark:bg-dots-lighter dark:bg-gray-900 selection:bg-red-500 selection:text-white">
         <div class="mx-auto p-6 lg:p-8">
-            <!-- select tool -->
+            <!-- select component -->
             <drop-down @selected-city="selectedCity"></drop-down>
-
+            <!-- weather and place component -->
             <div class="mt-14 flex flex-row gap-6 lg:gap-8">
                 <weather-container
                     :cityName="cityName"
@@ -51,12 +51,19 @@ export default
     methods: {
         selectedCity(value)
         {
-            this.city = value;
-            this.loadingWeather = true;
-            this.loadingPlace = true;
-            this.fetchWeather();
-            this.extractCityName();
-            this.fetchSearchedPlace();
+            if (value != '') {
+                this.city = value;
+                this.loadingWeather = true;
+                this.loadingPlace = true;
+                this.fetchWeather();
+                this.extractCityName();
+                this.fetchSearchedPlace();
+            } else {
+                this.cityName = '';
+                this.weatherLists = [];
+                this.searchedPlaceLists = [];
+            }
+            
         },
 
         fetchWeather()
