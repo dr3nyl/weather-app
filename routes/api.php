@@ -21,6 +21,5 @@ Route::get('/weather/{city}', [WeatherController::class, 'getData']);
 Route::controller(PlaceController::class)->group(function () {
 
     Route::get('/place/search/{city}', 'showSearchPlace');
-    Route::get('/place/{id}', 'showPlaceDetail');
     Route::get('/place/photo/{id}', 'showPlacePhoto');
 });
