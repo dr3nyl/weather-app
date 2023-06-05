@@ -42,8 +42,8 @@ export default
     props: {
         name: String,
         categories: Array,
-        location: Array,
-        id: Number
+        location: Object,
+        id: String
     },
 
     mounted() {

@@ -39,7 +39,7 @@ export default
     props: {
         loadingWeather: Boolean,
         cityName: String,
-        weatherLists: Array
+        weatherLists: Object
     }
 }
 
